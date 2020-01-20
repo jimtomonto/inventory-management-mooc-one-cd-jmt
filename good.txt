@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"extensions/v1beta1","kind":"Ingress","metadata":{"annotations":{},"labels":{"app":"test-inventory-management-svc-pg","app.kubernetes.io/instance":"test-inventory-management-svc-pg","app.kubernetes.io/name":"inventory-management-svc-pg","argocd.argoproj.io/instance":"test-inventory-management-svc-pg","helm.sh/chart":"inventory-management-svc-pg-1.0.0-14"},"name":"test-inventory-management-svc-pg","namespace":"test-pg"},"spec":{"rules":[{"host":"inventory-management-svc-pg-test-pg.mooc-four-ocp-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.sjc04.containers.appdomain.cloud","http":{"paths":[{"backend":{"serviceName":"test-inventory-management-svc-pg","servicePort":"http"},"path":null}]}}],"tls":[{"hosts":["inventory-management-svc-pg-test-pg.mooc-four-ocp-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.sjc04.containers.appdomain.cloud"],"secretName":"mooc-four-ocp-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000"}]}}
+  creationTimestamp: '2020-01-08T17:01:21Z'
+  generation: 1
+  labels:
+    app: test-inventory-management-svc-pg
+    app.kubernetes.io/instance: test-inventory-management-svc-pg
+    app.kubernetes.io/name: inventory-management-svc-pg
+    argocd.argoproj.io/instance: test-inventory-management-svc-pg
+    helm.sh/chart: inventory-management-svc-pg-1.0.0-14
+  name: test-inventory-management-svc-pg
+  namespace: test-pg
+  resourceVersion: '6440974'
+  selfLink: >-
+    /apis/extensions/v1beta1/namespaces/test-pg/ingresses/test-inventory-management-svc-pg
+  uid: 7e87563f-3238-11ea-85bd-aea018e44f6a
+spec:
+  rules:
+    - host: >-
+        inventory-management-svc-pg-test-pg.mooc-four-ocp-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.sjc04.containers.appdomain.cloud
+      http:
+        paths:
+          - backend:
+              serviceName: test-inventory-management-svc-pg
+              servicePort: http
+  tls:
+    - hosts:
+        - >-
+          inventory-management-svc-pg-test-pg.mooc-four-ocp-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.sjc04.containers.appdomain.cloud
+      secretName: mooc-four-ocp-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000
+status:
+  loadBalancer:
+    ingress:
+      - ip: 169.62.77.45
